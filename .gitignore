@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.jupyter/
+sentinel_lab1_real_v3/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

@@ -1,0 +1,30 @@
+{
+  "endpoint": "https://earth-search.aws.element84.com/v1",
+  "collection": "sentinel-2-l2a",
+  "discovery_bbox": [
+    19.7,
+    49.9,
+    20.1,
+    50.2
+  ],
+  "discovery_start": "2026-09-21T00:00:00Z",
+  "item_id": "S2C_34UDA_20250605_0_L2A",
+  "aoi_bbox": [
+    19.92,
+    50.045,
+    19.935,
+    50.055
+  ],
+  "bands": [
+    "red",
+    "nir"
+  ],
+  "max_pixels_per_band": 500000,
+  "range_byte_budget_per_band": 12582912,
+  "max_output_bytes_per_band": 8388608,
+  "workspace_budget_bytes": 157286400,
+  "database": "../state/catalogue.sqlite",
+  "data_directory": "../data",
+  "schema": "../student_schema.sql",
+  "log_file": "../state/events.log"
+}

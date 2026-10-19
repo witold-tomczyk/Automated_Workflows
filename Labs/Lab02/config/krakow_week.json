@@ -1,0 +1,17 @@
+{
+  "endpoint": "https://earth-search.aws.element84.com/v1",
+  "collection": "sentinel-2-l2a",
+  "bbox": [
+    19.7,
+    49.9,
+    20.1,
+    50.2
+  ],
+  "initial_start": "2026-09-21T00:00:00Z",
+  "overlap_days": 7,
+  "page_size": 20,
+  "max_pages": 100,
+  "database": "../state/catalogue.sqlite",
+  "preview_directory": "../state/previews",
+  "log_file": "../state/events.log"
+}

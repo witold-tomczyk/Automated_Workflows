@@ -1,0 +1,108 @@
+{
+  "red": {
+    "file": "real_red_aoi.tif",
+    "plan": {
+      "aoi_bbox": [
+        19.91,
+        50.04,
+        19.94,
+        50.06
+      ],
+      "asset_key": "red",
+      "crs": "EPSG:32634",
+      "dtype": "uint16",
+      "nodata": 0,
+      "offset": -0.1,
+      "raw_pixel_bytes": 99426,
+      "recipe": "native10m-wgs84-mask-v1",
+      "scale": 0.0001,
+      "shape": [
+        227,
+        219
+      ],
+      "source_shape": [
+        10980,
+        10980
+      ],
+      "source_transform": [
+        10.0,
+        0.0,
+        399960.0,
+        0.0,
+        -10.0,
+        5600040.0
+      ],
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/34/U/DA/2025/6/S2C_34UDA_20250605_0_L2A/B04.tif",
+      "transform": [
+        10.0,
+        0.0,
+        421940.0,
+        0.0,
+        -10.0,
+        5545880.0
+      ],
+      "window": [
+        2198,
+        5416,
+        219,
+        227
+      ]
+    },
+    "sha256": "df429fb5eff330afe76e6dd0b7e749fba163e77dada3bdf6c6e18e430c601441",
+    "size_bytes": 75792,
+    "source": "Actual bounded range read, 15 October 2026"
+  },
+  "nir": {
+    "file": "real_nir_aoi.tif",
+    "plan": {
+      "aoi_bbox": [
+        19.91,
+        50.04,
+        19.94,
+        50.06
+      ],
+      "asset_key": "nir",
+      "crs": "EPSG:32634",
+      "dtype": "uint16",
+      "nodata": 0,
+      "offset": -0.1,
+      "raw_pixel_bytes": 99426,
+      "recipe": "native10m-wgs84-mask-v1",
+      "scale": 0.0001,
+      "shape": [
+        227,
+        219
+      ],
+      "source_shape": [
+        10980,
+        10980
+      ],
+      "source_transform": [
+        10.0,
+        0.0,
+        399960.0,
+        0.0,
+        -10.0,
+        5600040.0
+      ],
+      "source_url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/34/U/DA/2025/6/S2C_34UDA_20250605_0_L2A/B08.tif",
+      "transform": [
+        10.0,
+        0.0,
+        421940.0,
+        0.0,
+        -10.0,
+        5545880.0
+      ],
+      "window": [
+        2198,
+        5416,
+        219,
+        227
+      ]
+    },
+    "sha256": "94733ceb5a90b44961485d021290543635df521a4c1da4d6fbb79ef7ec5f7d72",
+    "size_bytes": 76138,
+    "source": "Actual bounded range read, 15 October 2026"
+  }
+}

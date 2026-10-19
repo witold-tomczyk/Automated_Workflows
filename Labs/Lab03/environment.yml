@@ -1,0 +1,10 @@
+name: satellite-workflows
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - rasterio>=1.4,<2
+  - numpy>=1.26,<3
+  - matplotlib
+  - jupyterlab
+  - ipykernel

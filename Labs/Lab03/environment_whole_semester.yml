@@ -1,0 +1,124 @@
+# Automated Workflows in Satellite Image Processing
+# Semester environment, version 1, 18 October 2026
+# Includes the packages required by Labs 01-03 and common later lab tools.
+# Intended for Windows x64, Linux x64, and macOS 11+ (Intel or Apple Silicon).
+# Dependency resolution passed for all four targets on 18 October 2026.
+# These were solver dry runs; full installations and runtime tests were not run.
+# The Windows plan downloads approximately 669 MiB of compressed packages.
+# Allow additional disk space for extraction and the installed environment.
+#
+# New environment (run from the folder containing this file):
+# conda env create --file environment_satellite_workflows_semester_v1_20261018.yml
+#
+# If you already have the satellite-workflows environment:
+# conda env update --name satellite-workflows --file environment_satellite_workflows_semester_v1_20261018.yml
+#
+# Activate once, then register its notebook kernel:
+# conda activate satellite-workflows
+# python -m ipykernel install --user --name satellite-workflows --display-name "Python (Satellite Workflows)"
+# jupyter lab
+# Select "Python (Satellite Workflows)" when opening a notebook.
+# Restart an already running notebook kernel after updating the environment.
+#
+# All dependencies come from conda-forge. Keep the geospatial packages in
+# this same channel so their compiled GDAL/PROJ dependencies remain compatible.
+# Python 3.11 matches the supplied Lab 03 environment.
+# This is a portable specification with version ranges, not an exact lock file.
+# Specialized SAR processors, deep learning frameworks, and CUDA will use
+# separate environments selected for the later tools and available hardware.
+# Git and DB Browser for SQLite remain separate desktop applications.
+# Installation references:
+# https://rasterio.readthedocs.io/en/stable/installation.html
+# https://docs.conda.io/projects/conda/en/stable/user-guide/tasks/manage-environments.html
+
+name: satellite-workflows
+
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  # Python and package management
+  - python=3.11
+  - pip
+
+  # Notebooks, interactive controls, and notebook execution/export
+  - jupyterlab>=4,<5
+  - notebook>=7,<8
+  - ipykernel>=6,<8
+  - ipywidgets>=8,<9
+  - nbformat>=5,<6
+  - nbclient>=0.10,<1
+  - nbconvert>=7,<8
+
+  # Arrays, tables, scientific calculations, and plots
+  - numpy>=1.26,<3
+  - scipy>=1.12,<2
+  - pandas>=2.2,<3
+  - matplotlib>=3.8,<4
+  - seaborn>=0.13,<1
+  - pillow>=10,<13
+
+  # Raster data, coordinate systems, AOIs, and vector data
+  # GDAL also supplies command line utilities such as gdalinfo.
+  - rasterio>=1.4,<2
+  - gdal>=3.8,<4
+  - pyproj>=3.6,<4
+  - shapely>=2,<3
+  - geopandas>=1,<2
+  - pyogrio>=0.9,<1
+  - xarray>=2024.6
+  - rioxarray>=0.17,<1
+
+  # Scientific data formats and chunked storage
+  # Keep Zarr on version 2 until a lab explicitly adopts the version 3 API.
+  - h5py>=3.10,<4
+  - netcdf4>=1.6,<2
+  - zarr>=2.18,<3
+  - pyarrow>=15
+
+  # STAC discovery, signed asset URLs, HTTP, retries, and cloud files
+  - pystac>=1.10,<2
+  - pystac-client>=0.8,<1
+  - planetary-computer>=1,<2
+  - requests>=2.32,<3
+  - httpx>=0.27,<1
+  - tenacity>=8,<10
+  - fsspec
+  - s3fs
+  - boto3>=1.34,<2
+
+  # Database access and configuration
+  # sqlite3 is included with Python; sqlite adds the terminal sqlite3 program.
+  - sqlite>=3.45
+  - sqlalchemy>=2,<3
+  - alembic>=1.13,<2
+  - pyyaml>=6,<7
+  - jsonschema>=4,<5
+  - pydantic>=2,<3
+  - python-dotenv>=1,<2
+
+  # Workflow graphs, parallel processing, scheduling, and diagnostics
+  - dask>=2024.5
+  - distributed>=2024.5
+  - networkx>=3,<4
+  - apscheduler>=3.10,<4
+  - psutil>=5.9,<8
+  - tqdm>=4.66,<5
+  - rich>=13,<15
+
+  # Image processing, CPU machine learning, and model serialization
+  - scikit-image>=0.23,<1
+  - scikit-learn>=1.4,<2
+  - joblib>=1.3,<2
+
+  # Later dashboard, map, and API exercises
+  - streamlit>=1.35,<2
+  - plotly>=5,<7
+  - folium>=0.16,<1
+  - fastapi>=0.110,<1
+  - uvicorn>=0.29,<1
+
+  # Tests and code checks
+  - pytest>=8,<10
+  - ruff
